@@ -67,6 +67,7 @@ class Program
 - {okuyamas[3]}
 - {okuyamas[4]}
 今日は世界豚汁デーなんだな，はー！";
+		Console.WriteLine(message);
 		var dj = new DiscordJson(message);
 		string jsonMsg = JsonSerializer.Serialize(dj);
 		using (var client = new HttpClient())  
