@@ -1,4 +1,6 @@
-﻿class DiscordJson
+﻿using System.Text.Json;
+
+class DiscordJson
 {
 	public string content {get;set;}
 
