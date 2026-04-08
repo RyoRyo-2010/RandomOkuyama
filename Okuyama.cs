@@ -1,8 +1,8 @@
+using System.Text;
 
-
-class Okuyama
+public class Okuyama
 {
-    struct OkuyamaChar
+    private struct OkuyamaChar
     {
         public char c;
         public int trueIndex;
@@ -20,7 +20,7 @@ class Okuyama
     /// 1/2の確率で抽選して，成功ならtrueIndexへ，失敗ならfalseIndexへ飛ぶ
     /// -1で終了
     /// </summary>
-    static OkuyamaChar[] okuyamas = 
+    private static OkuyamaChar[] okuyamas = 
 		{
 			new OkuyamaChar('奥',1,2),
 			new OkuyamaChar('山',2,0),
@@ -32,7 +32,7 @@ class Okuyama
     /// </summary>
     /// <param name="rnd">グローバルに使うRandom</param>
     /// <returns>豚汁のかけら</returns>
-	static string GenerateOkuyama(Random rnd)
+	public static string GenerateOkuyama(Random rnd)
 	{
 		int index = 0;
 		var sb = new StringBuilder(15);
